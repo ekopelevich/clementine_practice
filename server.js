@@ -3,8 +3,8 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function() {
-  res.send('Hello World');
+app.get('/', function(req, res) {
+  res.sendFile(process.cwd() + '/index.html');
 });
 
 app.listen(3000, function() {
